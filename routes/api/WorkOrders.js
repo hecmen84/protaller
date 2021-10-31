@@ -79,6 +79,7 @@ router.delete('/:id', async (req, res) => {
   try{
     const id = req.params.id;
         //deleting the work order
+        //testing commit
         await WorkOrder.destroy({where: {id_work_order:id}});
         let workOrderDeleted = await WorkOrder.findByPk(id);
         
